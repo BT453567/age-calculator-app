@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script defer src="./js/main.js"></script>
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png">
+    <title>Age calculator app</title>
+</head>
+<body>
+    <main>
+        <div class="age-calculator-container">
+            <div class="inputs-container">
+                <div class="input-group">
+                    <label id="day-label" for="day">DAY</label>
+                    <input id="day" type="text">
+                    <p id="day-error" class="error"></p>
+                </div>
+
+                <div class="input-group">
+                    <label id="month-label" for="month">MONTH</label>
+                    <input id="month" type="text">
+                    <p id="month-error" class="error"></p>
+                </div>
+
+                <div class="input-group">
+                    <label id="year-label" for="year">YEAR</label>
+                    <input id="year" type="text">
+                    <p id="year-error" class="error"></p>
+                </div>
+                
+                
+            </div>
+
+            <div class="button-container">
+                <div class="line"></div>
+                <button id="calculate-button" class="calculate-button">
+                    <img src="./assets/images/icon-arrow.svg" alt="">
+                </button>
+                <div class="line line2"></div>
+
+            </div>
+
+            <div class="display-age-container">
+                <div>
+                    <span id="year-calculation" class="number"></span><span class="word">years</span>
+                </div>
+                <div>
+                    <span id="month-calculation" class="number"></span><span class="word">months</span>
+                </div>
+                <div>
+                    <span id="day-calculation" class="number"></span><span class="word">days</span>
+                </div>
+                
+            </div>
+            
+
+        </div>
+    </main>
+    
+</body>
+</html>

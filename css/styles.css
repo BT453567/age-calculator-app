@@ -1,0 +1,231 @@
+:root{
+
+    /* ### Primary */
+
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+
+    /* ### Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+
+}
+
+@font-face {
+    font-family: 'poppins400i';
+    src: url('../assets/fonts/Poppins-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'poppins700';
+    src: url('../assets/fonts/Poppins-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins800i';
+    src: url('../assets/fonts/Poppins-ExtraBoldItalic.ttf');
+    font-weight: 800;
+    font-style:italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 32px;
+    background-color: var(--off-white);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    
+}
+
+.age-calculator-container {
+    padding: 30px 40px;
+    border-radius: 20px 20px 200px 20px;
+    background-color: var(--white);
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-right: 100px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-family: 'poppins700', sans-serif;
+    font-size: 0.9rem;
+    color: var(--smokey-grey);
+    letter-spacing: 2px;
+    
+}
+
+.input-group input {
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 32px;
+    max-width: 10rem;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid var(--light-grey);
+    font-family: 'poppins700', sans-serif;
+    color: var(--smokey-grey);
+}
+
+.input-group input::placeholder {
+    color: var(--smokey-grey);
+}
+
+.input-group input:focus,
+.input-group input:valid {
+    color: var(--off-black);
+}
+
+.input-group input:focus {
+    border-color: var(--purple);
+}
+
+.error {
+    position: absolute;
+    font-family: 'poppins400i', sans-serif;
+    top: 107%;
+    left: 0;
+    width: 100%;
+    color: var(--light-red);
+    font-size: 0.8rem;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--light-grey);
+
+}
+
+.line2 {
+    display: none;
+}
+
+.calculate-button {
+    background-color: var(--purple);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.number {
+    font-family: 'poppins800i', sans-serif;
+    color: var(--purple);
+    margin-right: 10px;
+    font-size: 4rem;
+}
+
+.word {
+    font-family: 'poppins800i', sans-serif;
+    color: var(--off-black);
+    font-size: 4rem;
+}
+
+@media (hover:hover) {
+    .calculate-button:hover {
+        background-color: var(--off-black);
+    }
+}
+
+@media (hover:none) {
+    .calculate-button:active {
+        background-color: var(--off-black);
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    body {
+        display: block;
+        padding: 40px 10px;
+    }
+
+    .age-calculator-container {
+        padding: 30px 20px;
+        border-bottom-right-radius: 100px;
+    }
+
+    .inputs-container {
+        margin-right: 0px;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .input-group label {
+        font-size: 0.7rem;
+    }
+
+    .error {
+        font-size: 0.6rem;
+    }
+
+    .input-group input {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .button-container {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .calculate-button {
+        height: 55px;
+        width: 55px;
+    }
+
+    .calculate-button img {
+        width: 30px;
+        height: auto;
+    }
+
+    .line2 {
+        display: block;
+    }
+
+    .word {
+        font-size: 2.5rem;
+    }
+
+    .number {
+        font-size: 2.5rem;
+    }
+
+}
+
